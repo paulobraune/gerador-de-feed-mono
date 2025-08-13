@@ -34,12 +34,6 @@ const productSchema = new mongoose.Schema({
     required: true,
     index: true,
   },
-  source: {
-    type: String,
-    required: true,
-    enum: ['shopify'],
-    default: 'shopify',
-  },
   title: {
     type: String,
     required: true,
@@ -114,7 +108,6 @@ const productSchema = new mongoose.Schema({
 });
 
 // índices principais
-productSchema.index({ business_id: 1, source: 1 });
 productSchema.index({ business_id: 1, status: 1 });
 productSchema.index({ business_id: 1, exclude: 1 });
 

@@ -31,7 +31,6 @@ class FeedController {
         productCount: 0,
         variantCount: 0,
         active: true,
-        source: 'shopify',
         status: 'pending'
       };
       

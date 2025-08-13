@@ -19,12 +19,6 @@ const feedSchema = new mongoose.Schema({
     required: true,
     enum: ['facebook', 'google', 'instagram', 'pinterest'],
   },
-  source: {
-    type: String,
-    required: true,
-    enum: ['shopify'],
-    default: 'shopify',
-  },
   productType: {
     type: String,
     required: true,

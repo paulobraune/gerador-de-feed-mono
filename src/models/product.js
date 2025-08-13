@@ -118,5 +118,6 @@ productSchema.index({ business_id: 1, source: 1 });
 productSchema.index({ business_id: 1, status: 1 });
 productSchema.index({ business_id: 1, exclude: 1 });
 
-const Product = mongoose.model('business_catalog_feeds', productSchema);
+const Product = mongoose.model('business_catalog_products', productSchema);
+
 module.exports = Product;

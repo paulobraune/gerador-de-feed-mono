@@ -30,7 +30,6 @@ class FeedController {
         productType: options.productType || 'group',
         productCount: 0,
         variantCount: 0,
-        updateFrequency: 'daily',
         active: true,
         source: 'shopify',
         status: 'pending'
@@ -284,16 +283,13 @@ class FeedController {
           existingFeed.productType = options.productType;
         }
         
-        if (options.primaryDomain || options.currencyCode || options.language) {
+        if (options.primaryDomain || options.currencyCode) {
           existingFeed.settings = existingFeed.settings || {};
           if (options.primaryDomain) {
             existingFeed.settings.primaryDomain = options.primaryDomain;
           }
           if (options.currencyCode) {
             existingFeed.settings.currencyCode = options.currencyCode;
-          }
-          if (options.language) {
-            existingFeed.settings.language = options.language;
           }
         }
       }
@@ -317,7 +313,6 @@ class FeedController {
         const mergedOptions = {
           primaryDomain: existingFeed.settings?.primaryDomain || 'defaultdomain.com',
           currencyCode: existingFeed.settings?.currencyCode || 'BRL',
-          language: existingFeed.settings?.language || 'pt-BR',
           productType: existingFeed.productType || 'group',
           ...options
         };

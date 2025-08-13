@@ -31,12 +31,6 @@ const feedSchema = new mongoose.Schema({
     enum: ['group', 'variant'],
     default: 'group',
   },
-  updateFrequency: {
-    type: String,
-    required: true,
-    enum: ['hourly', 'daily', 'weekly'],
-    default: 'daily',
-  },
   active: {
     type: Boolean,
     required: true,
@@ -97,10 +91,6 @@ const feedSchema = new mongoose.Schema({
     currencyCode: {
       type: String,
       default: 'BRL',
-    },
-    language: {
-      type: String,
-      default: 'pt-BR',
     }
   },
   createdAt: {

@@ -58,7 +58,6 @@ async function generateFeedForBusiness(business_id, fileName, options) {
 
     const primaryDomain = options.primaryDomain || 'defaultdomain.com';
     const currencyCode = options.currencyCode || 'BRL';
-    const language = options.language || 'pt-BR';
     const productType = options.productType || 'group';
 
     const feed = xmlbuilder

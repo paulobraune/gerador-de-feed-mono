@@ -10,7 +10,6 @@ const schemas = {
     options: Joi.object({
       primaryDomain: Joi.string().required(),
       currencyCode: Joi.string().default('BRL'),
-      language: Joi.string().default('pt-BR'),
       productType: Joi.string().valid('group', 'variant').default('group')
     }).required()
   }),
@@ -26,7 +25,6 @@ const schemas = {
   options: Joi.object({
     primaryDomain: Joi.string().optional(),
     currencyCode: Joi.string().optional(),
-    language: Joi.string().optional(),
     productType: Joi.string().valid('group', 'variant').optional()
   }).optional()
 })
